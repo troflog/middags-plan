@@ -21,7 +21,7 @@ with open('../middager.md','r') as fp:
                 dinners.append([m.group(1).strip(),''])                
         if '[' in line:
             #Extract link and add it to the las dinner
-            m =  re.search('\((.*)\)$',line)
+            m =  re.search(r'\((.*)\)$',line)
             if m:                
                 dinners[-1][1] = m.group(1).strip()
         
